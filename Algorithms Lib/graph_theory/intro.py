@@ -12,7 +12,7 @@ V = 10 # Number of nodes
 adj_graph = [[] for i in range(V+1)]
 
 def adj_createEdge(x, y): # Edge from node x to node y (directed)
-    adj_graph[x] = y
+    adj_graph[x].append(y)
 
 def adj_createEdgeUndirected(x, y):
     adj_createEdge(x, y)

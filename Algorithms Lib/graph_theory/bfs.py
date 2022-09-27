@@ -1,6 +1,6 @@
 # Breadth first search: Searches all nodes distance 1 away, then distance 2, then distance 3... etc.
 
-# Useful for: Find the shortest path
+# Useful for: Find the shortest path (unweighted graphs only)
 
 # Simulate it on paper if you're confused.
 

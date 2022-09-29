@@ -8,13 +8,13 @@ V = 10 # Number of nodes
 adj_graph = [[] for i in range(V+1)]
 
 def adj_createEdge(x, y): # Edge from node x to node y (directed)
-    adj_graph[x] = y
+    adj_graph[x].append(y)
 
 s = 0 # Start with first node
 q=[] # queue 
 vis=[0 for i in range(V+1)] # visited array
 dist=[0 for i in range(V+1)] # distance from root node to node[i]
-q.append(adj_graph[s]) # starting node
+q.append(s) # starting node
 vis[s] = 1 # mark starting node as visited
 while(len(q)): # while we still have nodes to process
     topNode = q.pop(0) # remove top node 

@@ -3,6 +3,12 @@
 # 2. Calculating the total number of solutions for something
 # It works by breaking down a problem into subproblems and is applied to recursive / brute force algorithms
 
+# STEPS TO DP
+# 1. Find the state (a lot of the time, it's the variable that the questsion provides)
+# 2. Do some kind of guessing (think brute force)
+# 3. Find the relation (includes a min/max most of the time for optimization. What can you add to the previous subproblem (assume you already know it) in order to get the actual problem?)
+# 4. Base Case (what value of your state has an obvious answer)
+
 # Example: Fibonnacci sequence -- the algorithm is broken up into subproblems (fib(n-1) and fib(n-2)) that can be used to solve the original.
 def fib(n):
     if n == 0:

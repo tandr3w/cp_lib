@@ -14,9 +14,6 @@
 
 # Code plagarised from https://www.youtube.com/watch?v=Oq2E2yGadnU (amazing video btw watch it to help understanding)
 
-from tkinter import N
-
-
 arr = [1, 5, 4, 7, 4, 6, 3, 2, 2]
 
 def tree_init(arr): # Generates segment tree for array

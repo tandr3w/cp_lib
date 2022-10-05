@@ -5,6 +5,7 @@
 # When updating, you only need to update log(n) values, since each element only belongs to that many ranges.
 
 # Code plagarised from https://gist.github.com/rajatdiptabiswas/79fc1ce5cf410df4139b291f75bf0794
+# https://www.youtube.com/watch?v=uSFzHCZ4E-8
 
 def update(index, value, array, bi_tree):
 	while index < len(array):

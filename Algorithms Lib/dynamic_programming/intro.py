@@ -35,8 +35,9 @@ def fib_alt(n):
 # HOW TO SOLVE A DP PROBLEM?
 # Top down (recursive): Start at the function for the answer and work down to the base case
 # Bottom up (iterative): Start at the base case and work your way up to the answer
-# First, figure out the subproblems / states. What variables can you change? (intuition)
+# First, figure out the subproblems / states. What variables can you change? For sequences, this is usually a suffix/prefix/subarray.
 # Next, figure out the recurrence relation (hard part). To do this, you can start with the base case (simplest subproblem) and work your way up in complexity. If there are multiple options, max() and min() are used a lot where you just type both options in as parameters..
+# If you're using a suffix (or prefix), it's usually the calculation for the suffix/prefix (or a portion of it) plus recursively calling the function for the rest of the sequence. 
 
 # Example Problem
 # You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.

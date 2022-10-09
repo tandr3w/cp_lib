@@ -10,7 +10,7 @@ adj_graph = [[] for i in range(V+1)]
 def adj_createEdge(x, y): # Edge from node x to node y (directed)
     adj_graph[x].append(y)
 
-visited = [] * V
+visited = [0] * (V+1)
 
 def dfs(n, graph):
     visited[n] = 1 # Mark node as visited

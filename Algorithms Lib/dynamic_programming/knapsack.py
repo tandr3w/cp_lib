@@ -16,8 +16,6 @@ def dp(idx, remaining_weight):
         return -inf
     if remaining_weight == 0 or idx >= n:
         return 0
-    print(idx, end=" ")
-    print(remaining_weight)
     if memo[idx][remaining_weight] != None:
         return memo[idx][remaining_weight]
     memo[idx][remaining_weight] = max(

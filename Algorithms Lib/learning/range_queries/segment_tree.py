@@ -6,7 +6,7 @@
 # The next row is the sum of four numbers in the array (2^2 range)
 # etc. until one node covers the entire array
 # To update an element, you just have to traverse the path to the element and update each value (O(log n) elements)
-# You can also use this for min queries so who needs sparse tables smh
+# You can also use this for min queries (just replace the addition with min) so who needs sparse tables smh
 
 # IMPORTANT INFO!! 
 # The array goes top-down and left-right in storing values. This makes it so index//2 is the parent of node infex and index*2 & index*2+1 are the children.

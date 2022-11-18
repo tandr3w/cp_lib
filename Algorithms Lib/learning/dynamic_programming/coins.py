@@ -80,7 +80,7 @@ def count_nodp_recur(x): # Basically, just add 1 to the count every time the sum
         c += count_nodp_recur(x-coin) 
     return c
 
-print(count_nodp_recur(5))
+# print(count_nodp_recur(5))
 
 # --------------------
 
@@ -92,7 +92,34 @@ def solve_dp_iter_count(x): # Basically, each time the sum reaches 0 in a branch
             if n - coin >= 0:
                 count[n] += count[n-coin]
 
-solve_dp_iter_count(5)
-print(count[5])
+# solve_dp_iter_count(5)
+# print(count[5])
 
 
+
+values = {}
+memo = {}
+memo[0] = 1
+def solve_max(x): # Max appetizers for x dollars
+    if x == 0:
+        return 0
+    if x < 0:
+        return -math.inf
+    if x in memo:
+        return memo[x]
+    best = -math.inf
+    for appetizer in [215, 275, 335, 355, 420, 580]:
+        e = solve_max(x - appetizer)+1
+        if e > best:
+            values[x] = appetizer
+            best = e
+    memo[x] = best
+    return best
+
+
+n = 150500
+print(solve_max(n))
+
+while n > 0:
+    print(values[n])
+    n -= values[n]

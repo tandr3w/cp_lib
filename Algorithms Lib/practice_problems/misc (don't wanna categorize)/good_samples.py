@@ -1,3 +1,5 @@
+# note: doesn't work 
+
 # Need n-k samples
 
 # Count up from 1, 2, 3... m, then repeat, adding n-1 good samples each time (or append the number n units away) until the required good samples is less than m-1, then shorten the jump back to fit the remainder. Then, repeat that same note to make sure no good samples are added.

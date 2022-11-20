@@ -1,3 +1,5 @@
+# I HATE THIS PROBLEM I HATE THIS PROBLEM
+
 n, m, k = map(int, input().split())
 filled = 0
 

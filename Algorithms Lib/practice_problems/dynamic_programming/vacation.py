@@ -3,7 +3,6 @@ from sys import stdin, setrecursionlimit
 input = stdin.readline
 setrecursionlimit(1000000)
 
-# Has a random IR exception?? Idk why.
 def dp_recur():
 
     n = int(input())

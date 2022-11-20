@@ -31,3 +31,23 @@ for k in range(0, len(sequence)):
             length[k] = max([length[k], length[i]+1]) # Store Best Result
 
 print(max(length))
+
+
+# fast way! (n log n)
+
+# https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326552/optimization-from-brute-force-to-dynamic-programming-explained/
+# https://usaco.guide/gold/lis?lang=py
+# super helpful !!
+
+from bisect import bisect_left
+
+def lis_fast(arr):
+    sequence = []
+    for i in arr:
+        if len(sequence) == 0 or i > sequence[-1]:
+            sequence.append(i)
+        else:
+            smallest = bisect_left(sequence, i)
+            sequence[smallest] = i
+    return len(sequence)
+print(lis_fast(sequence))

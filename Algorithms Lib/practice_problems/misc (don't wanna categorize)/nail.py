@@ -1,4 +1,4 @@
-# Note: works on dmoj but shitty test cases?? 
+# Note: i hate this problem
 
 n = int(input())
 pieces = list(map(int, input().split()))

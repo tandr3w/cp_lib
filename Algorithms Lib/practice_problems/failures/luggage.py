@@ -1,5 +1,6 @@
 # TLEs for some reason
 # Time complexity should be n log n
+# i should've just used bisect smh
 
 n, k = map(int, input().split())
 items = list(map(int, input().split()))

@@ -17,7 +17,7 @@ for i in range(p):
         next_available = bisect_left(available, plane)-1
         if next_available > 0:
             mySet.remove(available[next_available])
-            available.pop(next_available) # this is the problem, too slow
+            available.pop(next_available)
             successful = True
         else:
             print(g - len(available) + 1)

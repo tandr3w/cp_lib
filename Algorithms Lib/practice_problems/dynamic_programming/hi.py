@@ -1,14 +1,13 @@
-# https://www.youtube.com/watch?v=ocZMDMZwhCY
-
-# Subproblem: Suffix of values/weights, remaining weights.
-
-values = [1, 5, 3]
-weights = [1, 2, 3]
-max_weight = 5
-
-n = len(values)
-memo = [[[None] * (max_weight+1)].copy()[0] for i in range(n)]
-print(memo)
+n, w = map(int, input().split())
+values = []
+weights = []
+for i in range(n):
+    x, y = map(int, input().split())
+    weights.append(x)
+    values.append(y)
+    
+max_weight = w
+memo = [[[None]*(max_weight+1)][0] for i in range(n)]
 
 from math import inf
 def dp(idx, remaining_weight):
@@ -25,6 +24,3 @@ def dp(idx, remaining_weight):
     return memo[idx][remaining_weight]
 
 print(dp(0, max_weight))
-
-
-# Bottom up solution

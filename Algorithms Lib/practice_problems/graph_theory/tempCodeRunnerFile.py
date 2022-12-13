@@ -1,1 +1,1 @@
-print(graph)
+inp

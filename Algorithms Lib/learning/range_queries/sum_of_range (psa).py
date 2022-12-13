@@ -15,12 +15,13 @@ def psa_init(arr): # Only has to loop once for the initialization, then each que
         psa[i] = arr[i] + psa[i-1]
     return psa
 
-def calc(l, r, li): # With a PSA, we can now calculate the sum of a range [l:r] in O(1) by subtracting r - l. 
+def calc(l, r, li): # With a PSA, we can now calculate the sum of a range [l:r] (inclusive) in O(1) by subtracting r - l. 
     if l == 0:
         return li[r]
     else:
         return li[r] - li[l-1]
 
 psa = psa_init(list)
+print(list)
 print(psa)
 print(calc(2, 6, psa))

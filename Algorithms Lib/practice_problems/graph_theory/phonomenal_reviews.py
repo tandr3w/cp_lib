@@ -65,6 +65,3 @@ if diameter+1 == num_nodes:
     print(num_nodes-1)
 else:
     print(diameter + (num_nodes - (diameter+1))*2)
-
-
-

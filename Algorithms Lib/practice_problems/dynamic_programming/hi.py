@@ -1,26 +1,22 @@
-n, w = map(int, input().split())
-values = []
-weights = []
+n = int(input())
+voters = []
+points = []
+
 for i in range(n):
-    x, y = map(int, input().split())
-    weights.append(x)
-    values.append(y)
-    
-max_weight = w
-memo = [[[None]*(max_weight+1)][0] for i in range(n)]
+    v, p = map(int, input().split())
+    voters.append(v)
+    points.append(p)
 
-from math import inf
-def dp(idx, remaining_weight):
-    if remaining_weight < 0:
-        return -inf
-    if remaining_weight == 0 or idx >= n:
-        return 0
-    if memo[idx][remaining_weight] != None:
-        return memo[idx][remaining_weight]
-    memo[idx][remaining_weight] = max(
-        dp(idx+1, remaining_weight), # Don't include the weight
-        dp(idx+1, remaining_weight-weights[idx]) + values[idx] # Include the weight
-    ) 
-    return memo[idx][remaining_weight]
+required_points = sum(points)//2 + 1
 
-print(dp(0, max_weight))
+dp = [[0 for x in range(required_points+1)] for y in range(n+1)]
+for i in range(n+1): 
+    for j in range(required_points+1): 
+        if i == 0 or j == 0: 
+            dp[i][j] = 0
+        elif points[i-1] <= j: 
+            dp[i][j] = min(dp[i-1][j-points[i-1]] + voters[i-1]//2+1, dp[i-1][j]) 
+        else: 
+            dp[i][j] = dp[i-1][j] 
+        print(dp)
+print(dp[n][required_points])

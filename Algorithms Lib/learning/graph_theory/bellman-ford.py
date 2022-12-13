@@ -21,11 +21,10 @@ addConnection(0, 1, 8)
 addConnection(0, 2, 10)
 addConnection(1, 3, 1)
 addConnection(2, 5, 2)
-addConnection(3, 2, -4)
-addConnection(3, 5, -1)
+addConnection(3, 2, 4)
+addConnection(3, 5, 1)
 addConnection(4, 2, 1)
-addConnection(5, 4, -2)
-print(graph)
+addConnection(5, 4, 2)
 
 from math import inf
 

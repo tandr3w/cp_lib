@@ -47,6 +47,9 @@
         "xstddef": "cpp",
         "xtr1common": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "mutex": "cpp",
+        "scoped_allocator": "cpp",
+        "queue": "cpp"
     }
 }

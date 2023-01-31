@@ -26,7 +26,7 @@ def dp_iter():
             else:
                 memo[i][j] = max(memo[i+1][j], memo[i][j+1])
 
-print(dp(0, 0))
+# print(dp(0, 0))
 
 dp_iter()
 print(memo[0][0])
